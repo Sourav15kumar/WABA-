@@ -1,0 +1,152 @@
+
+.dashboard-header {
+  width: 100%;
+  min-height: 88px;
+  padding: 18px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #e8edf5;
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.025);
+}
+
+.dashboard-header-brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.dashboard-logo {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 800;
+  box-shadow: 0 5px 12px rgba(37, 99, 235, 0.15);
+}
+
+.dashboard-header-brand h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+}
+
+.dashboard-header-brand span {
+  display: block;
+  margin-top: 3px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.dashboard-header-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.dashboard-number-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  padding: 10px 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.dashboard-number-label {
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.dashboard-number-info strong {
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+@media (max-width: 600px) {
+  .dashboard-header {
+    padding: 16px;
+    min-height: 76px;
+  }
+
+  .dashboard-logo {
+    width: 38px;
+    height: 38px;
+    font-size: 22px;
+  }
+
+  .dashboard-header-brand h2 {
+    font-size: 17px;
+  }
+
+  .dashboard-header-brand span {
+    font-size: 10px;
+  }
+
+  .dashboard-number-info {
+    padding: 8px 10px;
+  }
+
+  .dashboard-number-info strong {
+    font-size: 12px;
+  }
+
+  .dashboard-number-label {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 380px) {
+  .dashboard-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .dashboard-number-info {
+    align-items: flex-start;
+  }
+}
+
+.whatsapp-logo {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.18);
+}
+
+.dashboard-header-brand h2 {
+  font-size: 21px;
+  letter-spacing: -0.7px;
+}
+
+.dashboard-whatsapp-logo {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .dashboard-whatsapp-logo {
+    width: 40px;
+    height: 40px;
+  }
+}

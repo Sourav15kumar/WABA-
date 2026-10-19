@@ -1,0 +1,135 @@
+
+/* Main Dashboard Layout */
+
+.waba-dashboard {
+  min-height: 100vh;
+  background: #f6f8fc;
+  color: #0f172a;
+}
+
+.dashboard-content {
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 42px 40px 70px;
+}
+
+/* Page Heading */
+
+.dashboard-page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.dashboard-eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.dashboard-page-heading h1 {
+  margin: 0 0 10px;
+  color: #0f172a;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1.2px;
+  line-height: 1.25;
+}
+
+.dashboard-page-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.dashboard-heading-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dashboard-preview-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 14px;
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #dbeafe;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Dashboard Placeholder */
+
+.dashboard-empty-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  padding: 40px 24px;
+  background: #ffffff;
+  border: 1px dashed #cbd5e1;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.dashboard-empty-state h2 {
+  margin: 0 0 12px;
+  color: #1e293b;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.dashboard-empty-state p {
+  max-width: 430px;
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 28px 20px 50px;
+  }
+
+  .dashboard-page-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .dashboard-page-heading h1 {
+    font-size: 27px;
+  }
+
+  .dashboard-empty-state {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-content {
+    padding: 24px 16px 40px;
+  }
+
+  .dashboard-page-heading h1 {
+    font-size: 24px;
+  }
+
+  .dashboard-page-heading p {
+    font-size: 13px;
+  }
+}

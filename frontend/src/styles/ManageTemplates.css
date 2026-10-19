@@ -1,0 +1,173 @@
+
+/* Manage Templates Section */
+
+.manage-templates-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 30px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.manage-templates-section:hover {
+  border-color: #bfdbfe;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.07);
+  transform: translateY(-2px);
+}
+
+/* Left Side Content */
+
+.manage-templates-content {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+}
+
+.manage-templates-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  border-radius: 15px;
+  color: #2563eb;
+  font-size: 28px;
+}
+
+.manage-templates-info h2 {
+  margin: 0 0 8px;
+  color: #0f172a;
+  font-size: 18px;
+  font-weight: 750;
+  letter-spacing: -0.4px;
+}
+
+.manage-templates-info p {
+  max-width: 480px;
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Manage Templates Button */
+
+.manage-templates-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 46px;
+  padding: 12px 20px;
+  flex-shrink: 0;
+  background: #2563eb;
+  border: 1px solid #2563eb;
+  border-radius: 11px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.manage-templates-btn:not(:disabled):hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+}
+
+.manage-templates-btn span {
+  font-size: 19px;
+  transition: transform 0.25s ease;
+}
+
+.manage-templates-btn:not(:disabled):hover span {
+  transform: translateX(4px);
+}
+
+.manage-templates-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.manage-templates-btn:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 3px;
+}
+
+/* Tablet Responsive */
+
+@media (max-width: 768px) {
+  .manage-templates-section {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .manage-templates-btn {
+    align-self: flex-start;
+  }
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 480px) {
+  .manage-templates-section {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .manage-templates-content {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .manage-templates-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 23px;
+  }
+
+  .manage-templates-info h2 {
+    font-size: 16px;
+  }
+
+  .manage-templates-info p {
+    font-size: 12px;
+  }
+
+  .manage-templates-btn {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .manage-templates-section,
+  .manage-templates-btn,
+  .manage-templates-btn span {
+    transition: none;
+  }
+
+  .manage-templates-section:hover,
+  .manage-templates-btn:not(:disabled):hover {
+    transform: none;
+  }
+}

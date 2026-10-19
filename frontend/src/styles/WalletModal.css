@@ -1,0 +1,235 @@
+
+/* Background Overlay */
+
+.wallet-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(6px);
+}
+
+/* Main Modal */
+
+.wallet-modal {
+  width: 100%;
+  max-width: 460px;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 22px;
+  box-shadow: 0 25px 80px rgba(15, 23, 42, 0.22);
+  animation: walletModalAppear 0.25s ease-out;
+}
+
+@keyframes walletModalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Modal Header */
+
+.wallet-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.wallet-modal-header h2 {
+  margin: 0 0 9px;
+  color: #0f172a;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+}
+
+.wallet-modal-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.wallet-modal-close {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 10px;
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 23px;
+  line-height: 1;
+  transition: background 0.2s, color 0.2s;
+}
+
+.wallet-modal-close:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* Amount Input */
+
+.wallet-modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.wallet-modal form label {
+  margin-bottom: 10px;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.wallet-modal-input {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.wallet-modal-input:focus-within {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+.wallet-modal-input span {
+  padding: 0 16px;
+  color: #475569;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.wallet-modal-input input {
+  width: 100%;
+  height: 100%;
+  padding: 0 14px 0 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #0f172a;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.wallet-modal-input input::placeholder {
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Information Message */
+
+.wallet-modal-message {
+  margin: 14px 0 0;
+  padding: 12px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  color: #1d4ed8;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Action Buttons */
+
+.wallet-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.wallet-cancel-btn,
+.wallet-confirm-btn {
+  min-height: 44px;
+  padding: 11px 18px;
+  border-radius: 11px;
+  font-size: 13px;
+  font-weight: 700;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.wallet-cancel-btn {
+  background: #ffffff;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+.wallet-cancel-btn:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.wallet-confirm-btn {
+  background: #2563eb;
+  color: #ffffff;
+  border: 1px solid #2563eb;
+}
+
+.wallet-confirm-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.2);
+}
+
+.wallet-modal button:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 3px;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 480px) {
+  .wallet-modal {
+    padding: 24px 20px;
+    border-radius: 18px;
+  }
+
+  .wallet-modal-header h2 {
+    font-size: 20px;
+  }
+
+  .wallet-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .wallet-cancel-btn,
+  .wallet-confirm-btn {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wallet-modal {
+    animation: none;
+  }
+
+  .wallet-modal button {
+    transition: none;
+  }
+
+  .wallet-confirm-btn:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,181 @@
+
+.waba-connect-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 20px;
+  background:
+    radial-gradient(circle at 15% 15%, #dbeafe 0%, transparent 35%),
+    radial-gradient(circle at 85% 85%, #e0e7ff 0%, transparent 35%),
+    #f8fafc;
+}
+
+.waba-connect-card {
+  width: 100%;
+  max-width: 480px;
+  padding: 44px;
+  background: #ffffff;
+  border: 1px solid #e9eef5;
+  border-radius: 22px;
+  box-shadow:
+    0 20px 60px rgba(15, 23, 42, 0.06),
+    0 4px 12px rgba(15, 23, 42, 0.03);
+}
+
+.waba-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 38px;
+  color: #0f172a;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.waba-brand-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border-radius: 12px;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.waba-connect-heading {
+  margin-bottom: 32px;
+}
+
+.waba-connect-heading h1 {
+  margin: 0 0 12px;
+  color: #0f172a;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.25;
+}
+
+.waba-connect-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.waba-connect-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.waba-connect-card label {
+  margin-bottom: 10px;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.waba-input-group {
+  display: flex;
+  align-items: center;
+  height: 54px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.waba-input-group:focus-within {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+.country-code {
+  padding: 0 16px;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+  border-right: 1px solid #e2e8f0;
+}
+
+.waba-input-group input {
+  width: 100%;
+  height: 100%;
+  padding: 0 16px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #0f172a;
+  font-size: 15px;
+}
+
+.waba-input-group input::placeholder {
+  color: #94a3b8;
+}
+
+.waba-connect-btn {
+  width: 100%;
+  min-height: 52px;
+  margin-top: 22px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.waba-connect-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.22);
+}
+
+.waba-connect-btn:active {
+  transform: translateY(0);
+}
+
+.waba-connect-btn:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 3px;
+}
+
+.waba-connect-note {
+  margin: 26px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid #f1f5f9;
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+@media (max-width: 520px) {
+  .waba-connect-page {
+    padding: 20px 14px;
+  }
+
+  .waba-connect-card {
+    padding: 30px 22px;
+    border-radius: 18px;
+  }
+
+  .waba-connect-heading h1 {
+    font-size: 24px;
+  }
+
+  .waba-brand {
+    margin-bottom: 30px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .waba-connect-btn,
+  .waba-input-group {
+    transition: none;
+  }
+}

@@ -1,0 +1,306 @@
+
+/* Dashboard Statistics Grid */
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-bottom: 30px;
+}
+
+/* Statistics Card */
+
+.stat-card {
+  background: #ffffff;
+  border: 1px solid #e8edf5;
+  border-radius: 18px;
+  padding: 26px;
+  min-height: 180px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.025);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.07);
+}
+
+/* Card Header */
+
+.stat-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.stat-label {
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.stat-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: 12px;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+/* Statistics Value */
+
+.stat-card h2 {
+  margin: 0 0 10px;
+  color: #0f172a;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.stat-card p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Wallet Card */
+
+.wallet-stat {
+  background: linear-gradient(135deg, #ffffff, #f0f7ff);
+  border-color: #dbeafe;
+}
+
+.wallet-stat .stat-icon {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+/* Responsive Layout */
+
+@media (max-width: 1000px) {
+  .dashboard-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .stat-card {
+    padding: 22px;
+    min-height: 155px;
+  }
+
+  .stat-card h2 {
+    font-size: 27px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stat-card {
+    transition: none;
+  }
+
+  .stat-card:hover {
+    transform: none;
+  }
+}
+
+
+
+/* Premium Interactive Card Effects */
+
+.stat-card {
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Subtle top accent line */
+
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+/* Common hover effect */
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  background: #f0f7ff;
+  border-color: #93c5fd;
+  box-shadow: 0 16px 35px rgba(37, 99, 235, 0.1);
+}
+
+.stat-card:hover::before {
+  background: #2563eb;
+}
+
+/* Wallet card hover */
+
+.wallet-stat:hover {
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  border-color: #60a5fa;
+}
+
+/* Icon animation */
+
+.stat-icon {
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.stat-card:hover .stat-icon {
+  transform: scale(1.1);
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+/* Failed messages card - red hover */
+
+.stat-card:nth-child(3):hover {
+  background: #fff5f5;
+  border-color: #fca5a5;
+  box-shadow: 0 16px 35px rgba(220, 38, 38, 0.08);
+}
+
+.stat-card:nth-child(3):hover::before {
+  background: #ef4444;
+}
+
+.stat-card:nth-child(3):hover .stat-icon {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .stat-card,
+  .stat-icon,
+  .stat-card::before {
+    transition: none;
+  }
+
+  .stat-card:hover,
+  .stat-card:hover .stat-icon {
+    transform: none;
+  }
+}
+
+
+
+/* Wallet Recharge & Withdraw Buttons */
+
+.wallet-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.wallet-btn {
+  flex: 1;
+  min-height: 42px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Recharge Button */
+
+.recharge-btn {
+  background: #2563eb;
+  color: #ffffff;
+  border: 1px solid #2563eb;
+}
+
+.recharge-btn:not(:disabled):hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
+}
+
+/* Withdraw Button */
+
+.withdraw-btn {
+  background: #ffffff;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+}
+
+.withdraw-btn:not(:disabled):hover {
+  background: #eff6ff;
+  border-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.1);
+}
+
+/* Disabled Until Wallet API Is Connected */
+
+.wallet-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Keyboard Accessibility */
+
+.wallet-btn:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 3px;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 380px) {
+  .wallet-actions {
+    flex-direction: column;
+  }
+
+  .wallet-btn {
+    width: 100%;
+    flex: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wallet-btn {
+    transition: none;
+  }
+
+  .wallet-btn:not(:disabled):hover {
+    transform: none;
+  }
+}
