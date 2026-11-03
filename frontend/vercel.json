@@ -1,11 +1,5 @@
+
 {
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "/dashboard-preview",
-      "permanent": false
-    }
-  ],
   "rewrites": [
     {
       "source": "/(.*)",
